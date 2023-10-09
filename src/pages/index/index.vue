@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello 李俊霏')
+import { ref } from 'vue';
+const title = ref('Hello 李俊霏');
 </script>
 
 <style>
