@@ -12,30 +12,33 @@
   </view>
 
   <view style="display: flex; justify-content: center; width: 100%">
-    <view class="message-images">
-      <image
-        class="message-image-item"
-        src="../../static/image/order_state.png"
-        mode="scaleToFill"
-      />
-      <image
-        class="message-image-item"
-        src="../../static/image/system_message.png"
-        mode="scaleToFill"
-      />
-      <image
-        class="message-image-item"
-        src="../../static/image/activity_center.png"
-        mode="scaleToFill"
-      />
-    </view>
-  </view>
+    <view class="message-icons">
+      <view class="message-image-text">
+        <image
+          class="message-image-item"
+          src="../../static/image/order_state.png"
+          mode="scaleToFill"
+        />
+        <text class="message-text-item">订单状态</text>
+      </view>
 
-  <view style="display: flex; justify-content: center; width: 100%">
-    <view class="message-texts">
-      <text class="message-text-item">订单状态</text>
-      <text class="message-text-item">系统消息</text>
-      <text class="message-text-item">活动中心</text>
+      <view class="message-image-text">
+        <image
+          class="message-image-item"
+          src="../../static/image/system_message.png"
+          mode="scaleToFill"
+        />
+        <text class="message-text-item">系统消息</text>
+      </view>
+
+      <view class="message-image-text">
+        <image
+          class="message-image-item"
+          src="../../static/image/activity_center.png"
+          mode="scaleToFill"
+        />
+        <text class="message-text-item">活动中心</text>
+      </view>
     </view>
   </view>
 </template>
@@ -81,6 +84,12 @@ export default {
   font-weight: 550;
 }
 
+.message-icons {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+}
 .message-images {
   width: 80%;
   display: flex;
@@ -99,6 +108,14 @@ export default {
   height: 50px;
 }
 .message-text-item {
-  font-size: 12px;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.message-image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>
