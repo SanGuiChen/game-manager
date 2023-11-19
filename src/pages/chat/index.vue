@@ -1,22 +1,25 @@
 <template>
-  <view class="content">
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
+  <view style="display: flex; justify-content: center">
+    <text>聊天室</text>
   </view>
 </template>
 
-<script setup lang="ts">
+<script scoped>
 import { ref } from 'vue';
-const title = ref('Hello chat');
+
+export default {
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style>
-.content {
+<style scoped>
+.top-content {
+  width: 95%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 8px;
 }
 
 .logo {

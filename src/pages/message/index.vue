@@ -1,22 +1,61 @@
 <template>
-  <view class="content">
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
+  <view style="display: flex; justify-content: center; width: 100%">
+    <view class="top-content">
+      <view style="width: 18px; height: 18px"></view>
+      <text class="top-message-text">消息</text>
+      <image
+        style="width: 18px; height: 18px"
+        src="../../static/image/setting.png"
+        mode="scaleToFill"
+      />
+    </view>
+  </view>
+
+  <view style="display: flex; justify-content: center; width: 100%">
+    <view class="message-images">
+      <image
+        class="message-image-item"
+        src="../../static/image/order_state.png"
+        mode="scaleToFill"
+      />
+      <image
+        class="message-image-item"
+        src="../../static/image/system_message.png"
+        mode="scaleToFill"
+      />
+      <image
+        class="message-image-item"
+        src="../../static/image/activity_center.png"
+        mode="scaleToFill"
+      />
+    </view>
+  </view>
+
+  <view style="display: flex; justify-content: center; width: 100%">
+    <view class="message-texts">
+      <text class="message-text-item">订单状态</text>
+      <text class="message-text-item">系统消息</text>
+      <text class="message-text-item">活动中心</text>
     </view>
   </view>
 </template>
 
-<script setup lang="ts">
+<script scoped>
 import { ref } from 'vue';
-const title = ref('Hello message');
+
+export default {
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style>
-.content {
+<style scoped>
+.top-content {
+  width: 95%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 8px;
 }
 
 .logo {
@@ -36,5 +75,30 @@ const title = ref('Hello message');
 .title {
   font-size: 36rpx;
   color: #8f8f94;
+}
+.top-message-text {
+  font-size: 18px;
+  font-weight: 550;
+}
+
+.message-images {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+}
+
+.message-texts {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-image-item {
+  width: 50px;
+  height: 50px;
+}
+.message-text-item {
+  font-size: 12px;
 }
 </style>
